@@ -1,42 +1,45 @@
 import { Star, Quote } from "lucide-react";
 
-const testimonials = [
-  {
-    id: 1,
-    name: "Fatima Rahman",
-    location: "New York, USA",
-    rating: 5,
-    text: "Sent a birthday cake to my mother in Dhaka. The delivery was on time and she was so happy! The quality exceeded my expectations.",
-    avatar: "F",
-  },
-  {
-    id: 2,
-    name: "Ahmed Khan",
-    location: "London, UK",
-    rating: 5,
-    text: "Amazing service! The flower bouquet I ordered for my wife's anniversary was absolutely beautiful. Same-day delivery worked perfectly.",
-    avatar: "A",
-  },
-  {
-    id: 3,
-    name: "Nadia Islam",
-    location: "Toronto, Canada",
-    rating: 5,
-    text: "Best gift delivery service in Bangladesh! I've used them multiple times and they never disappoint. Highly recommended!",
-    avatar: "N",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const Testimonials = () => {
+    const { t } = useTranslation();
+
+    const testimonials = [
+        {
+            id: 1,
+            name: t('home.testimonials.items.0.name'),
+            location: t('home.testimonials.items.0.location'),
+            rating: 5,
+            text: t('home.testimonials.items.0.text'),
+            avatar: "F",
+        },
+        {
+            id: 2,
+            name: t('home.testimonials.items.1.name'),
+            location: t('home.testimonials.items.1.location'),
+            rating: 5,
+            text: t('home.testimonials.items.1.text'),
+            avatar: "A",
+        },
+        {
+            id: 3,
+            name: t('home.testimonials.items.2.name'),
+            location: t('home.testimonials.items.2.location'),
+            rating: 5,
+            text: t('home.testimonials.items.2.text'),
+            avatar: "N",
+        },
+    ];
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            What Our Customers Say
+            {t('home.testimonials.title')}
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Join thousands of happy customers who trust us to deliver joy to their loved ones
+            {t('home.testimonials.subtitle')}
           </p>
         </div>
 

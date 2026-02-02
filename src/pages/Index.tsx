@@ -7,8 +7,10 @@ import FeaturedProducts from "@/components/home/FeaturedProducts";
 import HowItWorks from "@/components/home/HowItWorks";
 import Testimonials from "@/components/home/Testimonials";
 import WhatsAppButton from "@/components/home/WhatsAppButton";
+import { useTranslation } from "react-i18next";
 
 const Index = () => {
+  const { t } = useTranslation();
   const homeJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -78,8 +80,8 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>ComboBasket.com | Best Combo Products Online in Bangladesh</title>
-        <meta name="description" content="Buy smart combo products online in Bangladesh from ComboBasket.com. Socks, gloves, caps, makeup & daily essentials in affordable combo packs with cash on delivery." />
+        <title>{t('home.seo.title')}</title>
+        <meta name="description" content={t('home.seo.description')} />
         <meta name="keywords" content="combo products Bangladesh, buy combo items online BD, socks gloves cap combo, makeup combo offer, daily essentials combo, winter combo products BD, buy combo items online" />
         <link rel="canonical" href="https://combobasket.com" />
         
@@ -107,11 +109,9 @@ const Index = () => {
         <main>
           {/* SEO Intro Section */}
           <section className="sr-only">
-            <h1>ComboBasket – Bangladesh's No.1 Combo Product E-commerce Platform</h1>
+            <h1>{t('home.seo.h1')}</h1>
             <p>
-              ComboBasket.com is a leading Bangladeshi e-commerce platform where customers can buy combo products online at the best price. 
-              We sell daily essentials, winter items, fashion accessories, and makeup products in smart combo packs that help you save money and time. 
-              Instead of buying items separately, get everything together in one affordable combo.
+              {t('home.seo.p')}
             </p>
           </section>
           

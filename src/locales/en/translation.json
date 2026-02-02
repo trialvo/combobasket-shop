@@ -50,5 +50,88 @@
   "mens-combo": "Men's Combo",
   "womens-combo": "Women's Combo",
   "sports-fitness": "Sports & Fitness"
+ },
+ "home": {
+  "seo": {
+   "title": "ComboBasket.com | Best Combo Products Online in Bangladesh",
+   "description": "Buy smart combo products online in Bangladesh from ComboBasket.com. Socks, gloves, caps, makeup & daily essentials in affordable combo packs with cash on delivery.",
+   "h1": "ComboBasket – Bangladesh's No.1 Combo Product E-commerce Platform",
+   "p": "ComboBasket.com is a leading Bangladeshi e-commerce platform where customers can buy combo products online at the best price. We sell daily essentials, winter items, fashion accessories, and makeup products in smart combo packs that help you save money and time. Instead of buying items separately, get everything together in one affordable combo."
+  },
+  "hero": {
+   "badge": "🎁 #1 Gift Delivery Service in Bangladesh",
+   "title_start": "Send Love & Joy",
+   "title_end": "Across Bangladesh",
+   "subtitle": "Surprise your loved ones with beautifully curated gifts. Same-day delivery in Dhaka. Nationwide shipping available.",
+   "shop_now": "Shop Now",
+   "explore_categories": "Explore Categories",
+   "gift_display": "Beautiful Gift Display",
+   "free_delivery": "Free Delivery",
+   "free_delivery_desc": "On orders ৳2000+",
+   "same_day": "Same Day",
+   "same_day_desc": "Delivery in Dhaka",
+   "trust_badges": {
+    "free_delivery": "Free Delivery",
+    "free_delivery_desc": "On orders over ৳2000",
+    "same_day": "Same Day Delivery",
+    "same_day_desc": "Order before 2 PM",
+    "secure_payment": "Secure Payment",
+    "secure_payment_desc": "100% secure checkout",
+    "gift_wrapping": "Gift Wrapping",
+    "gift_wrapping_desc": "Beautifully wrapped"
+   }
+  },
+  "category_section": {
+   "title": "Popular Combo Categories",
+   "subtitle": "Shop smart combo products that save you money and time. Get everything together in one affordable combo pack.",
+   "items_count": "{{count}} items"
+  },
+  "how_it_works": {
+   "title": "How It Works",
+   "subtitle": "Sending gifts to Bangladesh has never been easier. Follow these simple steps to surprise your loved ones.",
+   "steps": {
+    "1": {
+     "title": "Browse & Select",
+     "description": "Explore our curated collection of gifts and choose the perfect one for your loved ones."
+    },
+    "2": {
+     "title": "Easy Checkout",
+     "description": "Secure payment with multiple options including bKash, Nagad, and card payments."
+    },
+    "3": {
+     "title": "We Deliver",
+     "description": "Our team carefully packages and delivers your gift with same-day delivery available."
+    },
+    "4": {
+     "title": "Spread Joy",
+     "description": "Watch your loved ones smile as they receive your thoughtful surprise gift."
+    }
+   }
+  },
+  "testimonials": {
+   "title": "What Our Customers Say",
+   "subtitle": "Join thousands of happy customers who trust us to deliver joy to their loved ones",
+   "items": [
+    {
+     "name": "Fatima Rahman",
+     "location": "New York, USA",
+     "text": "Sent a birthday cake to my mother in Dhaka. The delivery was on time and she was so happy! The quality exceeded my expectations."
+    },
+    {
+     "name": "Ahmed Khan",
+     "location": "London, UK",
+     "text": "Amazing service! The flower bouquet I ordered for my wife's anniversary was absolutely beautiful. Same-day delivery worked perfectly."
+    },
+    {
+     "name": "Nadia Islam",
+     "location": "Toronto, Canada",
+     "text": "Best gift delivery service in Bangladesh! I've used them multiple times and they never disappoint. Highly recommended!"
+    }
+   ]
+  },
+  "featured_products": {
+   "title": "Featured Combo Packs",
+   "subtitle": "Check out our best-selling combo products loved by our customers."
+  }
  }
 }

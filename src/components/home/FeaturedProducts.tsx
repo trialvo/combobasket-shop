@@ -4,8 +4,11 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { getFeaturedProducts } from "@/data/products";
 
+import { useTranslation } from "react-i18next";
+
 const FeaturedProducts = () => {
   const products = getFeaturedProducts();
+  const { t } = useTranslation();
 
   return (
     <section className="py-16">
@@ -13,15 +16,15 @@ const FeaturedProducts = () => {
         <div className="flex flex-col md:flex-row md:items-center justify-between mb-12">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
-              Featured Gifts
+              {t('home.featured_products.title')}
             </h2>
             <p className="text-muted-foreground">
-              Our most loved and popular gift selections
+              {t('home.featured_products.subtitle')}
             </p>
           </div>
           <Link to="/products">
             <Button variant="outline" className="mt-4 md:mt-0 rounded-full">
-              View All Products
+              {t('nav.all_products')}
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
