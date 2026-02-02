@@ -3,16 +3,17 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Link } from "react-router-dom";
 import { categories } from "@/data/products";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className="bg-foreground text-background">
       {/* SEO Booster Section */}
       <div className="bg-primary/10 border-b border-primary/20">
         <div className="container mx-auto px-4 py-6">
           <p className="text-center text-sm text-foreground/80">
-            ComboBasket.com is one of the fastest-growing combo product online shops in Bangladesh. 
-            Buy socks, gloves, caps, makeup items, and daily essentials in combo packs at the best price with cash on delivery.
+            {t('footer.about_desc_long')}
           </p>
         </div>
       </div>
@@ -28,12 +29,11 @@ const Footer = () => {
               </div>
               <div>
                 <h3 className="text-lg font-bold">ComboBasket</h3>
-                <p className="text-xs opacity-70">Smart Combo Shopping</p>
+                <p className="text-xs opacity-70">{t('footer.about_slogan')}</p>
               </div>
             </Link>
             <p className="text-sm opacity-80 mb-4">
-              Bangladesh's No.1 Combo Product E-commerce Platform. Buy smart combo products 
-              online at the best price with cash on delivery all over Bangladesh.
+              {t('footer.about_desc_short')}
             </p>
             <div className="flex gap-2">
               <Button size="icon" variant="ghost" className="hover:bg-primary hover:text-primary-foreground">
@@ -53,20 +53,20 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-4">Quick Links</h4>
+            <h4 className="font-semibold mb-4">{t('footer.quick_links')}</h4>
             <ul className="space-y-2 text-sm opacity-80">
-              <li><Link to="/" className="hover:text-primary transition-colors">Home</Link></li>
-              <li><Link to="/products" className="hover:text-primary transition-colors">All Products</Link></li>
-              <li><Link to="/contact" className="hover:text-primary transition-colors">Contact Us</Link></li>
-              <li><Link to="/login" className="hover:text-primary transition-colors">My Account</Link></li>
-              <li><Link to="/terms" className="hover:text-primary transition-colors">Terms & Conditions</Link></li>
-              <li><Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/" className="hover:text-primary transition-colors">{t('footer.links.home')}</Link></li>
+              <li><Link to="/products" className="hover:text-primary transition-colors">{t('footer.links.all_products')}</Link></li>
+              <li><Link to="/contact" className="hover:text-primary transition-colors">{t('footer.links.contact')}</Link></li>
+              <li><Link to="/login" className="hover:text-primary transition-colors">{t('footer.links.my_account')}</Link></li>
+              <li><Link to="/terms" className="hover:text-primary transition-colors">{t('footer.links.terms')}</Link></li>
+              <li><Link to="/privacy" className="hover:text-primary transition-colors">{t('footer.links.privacy')}</Link></li>
             </ul>
           </div>
 
           {/* Categories */}
           <div>
-            <h4 className="font-semibold mb-4">Popular Categories</h4>
+            <h4 className="font-semibold mb-4">{t('footer.popular_categories')}</h4>
             <ul className="space-y-2 text-sm opacity-80">
               {categories.slice(0, 6).map((category) => (
                 <li key={category.id}>
@@ -74,7 +74,7 @@ const Footer = () => {
                     to={`/products?category=${category.slug}`} 
                     className="hover:text-primary transition-colors"
                   >
-                    {category.name}
+                    {t(`categories.${category.slug}`, category.name)}
                   </Link>
                 </li>
               ))}
@@ -83,7 +83,7 @@ const Footer = () => {
 
           {/* Contact & Newsletter */}
           <div>
-            <h4 className="font-semibold mb-4">Contact Us</h4>
+            <h4 className="font-semibold mb-4">{t('footer.contact')}</h4>
             <ul className="space-y-3 text-sm opacity-80 mb-6">
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-primary" />
@@ -99,26 +99,26 @@ const Footer = () => {
               </li>
             </ul>
             
-            <h4 className="font-semibold mb-2">Newsletter</h4>
+            <h4 className="font-semibold mb-2">{t('footer.newsletter')}</h4>
             <div className="flex gap-2">
               <Input 
-                placeholder="Your email" 
+                placeholder={t('footer.newsletter_placeholder')} 
                 className="bg-background/10 border-background/20 text-background placeholder:text-background/50"
               />
-              <Button className="shrink-0">Subscribe</Button>
+              <Button className="shrink-0">{t('footer.subscribe')}</Button>
             </div>
           </div>
         </div>
 
         {/* Why Buy From Us */}
         <div className="border-t border-background/10 mt-8 pt-8">
-          <h4 className="font-semibold mb-4 text-center">Why Buy Combo Products from ComboBasket?</h4>
+          <h4 className="font-semibold mb-4 text-center">{t('footer.why_us')}</h4>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-center text-sm opacity-80">
-            <div>✓ Best combo product price in Bangladesh</div>
-            <div>✓ Trusted Bangladeshi online shopping site</div>
-            <div>✓ 100% quality checked products</div>
-            <div>✓ Cash on delivery all over Bangladesh</div>
-            <div>✓ Fast and reliable delivery service</div>
+            <div>✓ {t('footer.why_us_items.1')}</div>
+            <div>✓ {t('footer.why_us_items.2')}</div>
+            <div>✓ {t('footer.why_us_items.3')}</div>
+            <div>✓ {t('footer.why_us_items.4')}</div>
+            <div>✓ {t('footer.why_us_items.5')}</div>
           </div>
         </div>
       </div>
@@ -127,11 +127,11 @@ const Footer = () => {
       <div className="border-t border-background/10">
         <div className="container mx-auto px-4 py-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm opacity-70">
-            <p>© 2026 ComboBasket.com. All rights reserved.</p>
+            <p>{t('footer.copyright')}</p>
             <div className="flex gap-4">
-              <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
-              <Link to="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
-              <Link to="/contact" className="hover:text-primary transition-colors">Contact Us</Link>
+              <Link to="/privacy" className="hover:text-primary transition-colors">{t('footer.links.privacy')}</Link>
+              <Link to="/terms" className="hover:text-primary transition-colors">{t('footer.links.terms')}</Link>
+              <Link to="/contact" className="hover:text-primary transition-colors">{t('footer.links.contact')}</Link>
             </div>
           </div>
         </div>
